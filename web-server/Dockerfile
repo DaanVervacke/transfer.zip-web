@@ -6,9 +6,6 @@ COPY package.json package-lock.json ./
 COPY src/ src/
 COPY public/ public/
 
-COPY .env .env
-# COPY . .
-
 # RUN ls -alh && sleep 10
 RUN npm i
 RUN npm run build

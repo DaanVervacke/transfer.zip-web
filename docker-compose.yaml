@@ -4,6 +4,12 @@ services:
       context: web-server
     ports:
       - 127.0.0.1:9001:80
+    environment:
+      - REACT_APP_SELFHOST=${REACT_APP_SELFHOST}
+      - REACT_APP_APP_URL=${REACT_APP_APP_URL}
+      - REACT_APP_ADSENSE=${REACT_APP_ADSENSE}
+      - REACT_APP_API_URL=${REACT_APP_API_URL}
+      - REACT_APP_ANALYTICS=${REACT_APP_ANALYTICS}
     restart: unless-stopped
 
   signaling-server:
